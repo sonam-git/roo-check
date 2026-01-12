@@ -1,0 +1,30 @@
+# RooCheck - Sherpa Clan Relationship Checker
+# https://roocheck.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /clans
+Allow: /check
+
+# Sitemaps
+Sitemap: https://roocheck.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin or API endpoints if any
+Disallow: /api/
+
+# Allow search engines to index images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

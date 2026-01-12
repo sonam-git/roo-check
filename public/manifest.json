@@ -1,0 +1,54 @@
+{
+  "name": "RooCheck - Sherpa Clan Relationship Checker",
+  "short_name": "RooCheck",
+  "description": "Check Sherpa clan relationships for marriage eligibility. Preserve cultural heritage.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f7f4",
+  "theme_color": "#a6825d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo/roocheck-logo-transparent.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo/roocheck-logo-transparent.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "education", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Check Relationship",
+      "short_name": "Check",
+      "description": "Check clan relationship for marriage eligibility",
+      "url": "/check",
+      "icons": [
+        {
+          "src": "/images/logo/roocheck-logo-transparent.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "View Clans",
+      "short_name": "Clans",
+      "description": "Learn about Sherpa clans",
+      "url": "/clans",
+      "icons": [
+        {
+          "src": "/images/logo/roocheck-logo-transparent.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,16 @@
+import type { Metadata } from 'next';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+
+export const metadata: Metadata = {
+  title: 'Home - RooCheck | Sherpa Clan Relationship Checker',
+  description: 'Discover RooCheck, a digital tool preserving Sherpa clan traditions. Check clan (Ru) and sub-clan (Shingza) relationships for marriage eligibility. Honor ancestral heritage with our culturally sensitive platform.',
+  openGraph: {
+    title: 'RooCheck - Preserve Sherpa Cultural Heritage',
+    description: 'Check Sherpa clan relationships for marriage eligibility. A respectful tool for preserving oral traditions.',
+    url: 'https://roocheck.com',
+  },
+};
 
 export default function Home() {
   return (

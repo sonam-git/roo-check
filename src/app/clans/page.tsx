@@ -1,5 +1,30 @@
+import type { Metadata } from 'next';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+
+export const metadata: Metadata = {
+  title: 'Sherpa Clans Guide - RooCheck | Understanding Ru and Shingza',
+  description: 'Learn about Sherpa major clans (Ru) including Minyakpa, Thimmi, Chawa, Lama, Ngompa, and Parwi-Tso, and their sub-clans (Shingza). Comprehensive guide to Sherpa ancestral lineages and clan traditions.',
+  keywords: [
+    'Sherpa clans',
+    'Ru',
+    'Shingza',
+    'Minyakpa',
+    'Thimmi',
+    'Chawa',
+    'Lama',
+    'Ngompa',
+    'major clans',
+    'sub-clans',
+    'Sherpa lineage',
+    'clan traditions',
+  ],
+  openGraph: {
+    title: 'Understanding Sherpa Clans - RooCheck',
+    description: 'Comprehensive guide to Sherpa major clans (Ru) and sub-clans (Shingza). Learn about ancestral lineages and traditions.',
+    url: 'https://roocheck.com/clans',
+  },
+};
 
 export default function ClansPage() {
   return (
