@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
+import ClanRelationshipTree from '@/components/ClanRelationshipTree';
 import { MajorClan, SubClan, ClanCheckResult } from '@/types/clan';
 
 export default function CheckPage() {
@@ -20,6 +21,9 @@ export default function CheckPage() {
   // Result
   const [result, setResult] = useState<ClanCheckResult | null>(null);
   const [error, setError] = useState<string | null>(null);
+  
+  // Tree view state
+  const [showTree, setShowTree] = useState(false);
 
   // Fetch clans on mount
   useEffect(() => {
@@ -48,6 +52,7 @@ export default function CheckPage() {
 
   const handleCheck = async () => {
     setError(null);
+    setShowTree(false); // Hide tree when performing new check
     
     if (!personAMajorClan || !personASubClan || !personBMajorClan || !personBSubClan) {
       setError('Please select both major clan and sub-clan for both individuals');
@@ -95,6 +100,7 @@ export default function CheckPage() {
     setPersonBSubClan('');
     setResult(null);
     setError(null);
+    setShowTree(false); // Hide tree when resetting
   };
 
   return (
@@ -164,6 +170,7 @@ export default function CheckPage() {
                     setPersonAMajorClan(e.target.value);
                     setPersonASubClan('');
                     setResult(null);
+                    setShowTree(false);
                   }}
                   className="w-full px-4 py-3 border-2 border-sage-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-white hover:border-sage-400 text-earth-800 font-medium shadow-sm"
                 >
@@ -187,6 +194,7 @@ export default function CheckPage() {
                   onChange={(e) => {
                     setPersonASubClan(e.target.value);
                     setResult(null);
+                    setShowTree(false);
                   }}
                   disabled={!personAMajorClan}
                   className="w-full px-4 py-3 border-2 border-sage-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 disabled:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-60 transition-all duration-200 bg-white hover:border-sage-400 text-earth-800 font-medium shadow-sm"
@@ -234,6 +242,7 @@ export default function CheckPage() {
                     setPersonBMajorClan(e.target.value);
                     setPersonBSubClan('');
                     setResult(null);
+                    setShowTree(false);
                   }}
                   className="w-full px-4 py-3 border-2 border-sage-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-200 bg-white hover:border-sage-400 text-earth-800 font-medium shadow-sm"
                 >
@@ -257,6 +266,7 @@ export default function CheckPage() {
                   onChange={(e) => {
                     setPersonBSubClan(e.target.value);
                     setResult(null);
+                    setShowTree(false);
                   }}
                   disabled={!personBMajorClan}
                   className="w-full px-4 py-3 border-2 border-sage-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 disabled:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-60 transition-all duration-200 bg-white hover:border-sage-400 text-earth-800 font-medium shadow-sm"
@@ -343,10 +353,39 @@ export default function CheckPage() {
             <p className="text-xl md:text-2xl text-earth-800 font-semibold bg-white/60 px-6 py-3 rounded-xl inline-block shadow-md">
               {result.reason}
             </p>
+
+            {/* View Tree Button */}
+            <div className="mt-6">
+              <button
+                onClick={() => setShowTree(!showTree)}
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  {showTree ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  )}
+                </svg>
+                <span>{showTree ? 'Hide Tree' : 'View Tree'}</span>
+                <span className="text-lg" style={{ fontFamily: 'serif' }}>🌲</span>
+              </button>
+            </div>
           </div>
 
+          {/* Relationship Tree Display */}
+          {showTree && (
+            <ClanRelationshipTree
+              personAMajorClan={clans.find(c => c.id === personAMajorClan)?.name || personAMajorClan}
+              personASubClan={clans.find(c => c.id === personAMajorClan)?.subClans.find(s => s.id === personASubClan)?.name || personASubClan}
+              personBMajorClan={clans.find(c => c.id === personBMajorClan)?.name || personBMajorClan}
+              personBSubClan={clans.find(c => c.id === personBMajorClan)?.subClans.find(s => s.id === personBSubClan)?.name || personBSubClan}
+              allowed={result.allowed}
+            />
+          )}
+
           {/* Explanation Box */}
-          <div className={`p-6 md:p-8 rounded-2xl shadow-lg border-2 ${result.allowed ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-br from-red-50 to-orange-50 border-red-300'}`}>
+          <div className={`p-6 md:p-8 rounded-2xl shadow-lg border-2 ${showTree ? 'mt-8' : ''} ${result.allowed ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-300' : 'bg-gradient-to-br from-red-50 to-orange-50 border-red-300'}`}>
             <div className="flex items-start space-x-3 mb-4">
               <svg className={`w-7 h-7 flex-shrink-0 mt-1 ${result.allowed ? 'text-green-600' : 'text-red-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
