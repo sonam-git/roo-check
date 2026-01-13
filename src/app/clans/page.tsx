@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 
 export const metadata: Metadata = {
   title: 'Sherpa Clans Guide - RooCheck | Understanding Ru and Shingza',
-  description: 'Learn about Sherpa major clans (Ru) including Minyakpa, Thimmi, Chawa, Lama, Ngompa, and Parwi-Tso, and their sub-clans (Shingza). Comprehensive guide to Sherpa ancestral lineages and clan traditions.',
+  description: 'Complete guide to the six major Sherpa clans (Ru): Minyakpa, Thimmi, Chawa, Ngompa, Lama, and Parwi-Tso, and their sub-clans (Shingza). Learn about Sherpa ancestral lineages, clan traditions, and marriage customs.',
   keywords: [
     'Sherpa clans',
     'Ru',
@@ -14,14 +14,17 @@ export const metadata: Metadata = {
     'Chawa',
     'Lama',
     'Ngompa',
-    'major clans',
+    'Parwi-Tso',
+    'Ronggi-Sharwa',
+    'six major clans',
     'sub-clans',
     'Sherpa lineage',
     'clan traditions',
+    'Sherpa marriage',
   ],
   openGraph: {
     title: 'Understanding Sherpa Clans - RooCheck',
-    description: 'Comprehensive guide to Sherpa major clans (Ru) and sub-clans (Shingza). Learn about ancestral lineages and traditions.',
+    description: 'Complete guide to the six major Sherpa clans (Ru) and their sub-clans (Shingza). Learn about ancestral lineages and traditions.',
     url: 'https://roocheck.com/clans',
   },
 };
@@ -96,9 +99,9 @@ export default function ClansPage() {
             </p>
             <p className="flex items-start">
               <span className="text-amber-600 mr-3 mt-1 flex-shrink-0">▪</span>
-              <span>Major clans include names such as Thimmi, Serwa, Chawa, Lama, Golay, Shangwa, 
-              Murmin, and Gole, among others. Each represents a distinct ancestral line with 
-              its own history and traditions.</span>
+              <span>There are <strong className="text-amber-700">six major Sherpa clans (Ru)</strong>: 
+              Minyakpa, Thimmi, Chawa, Ngompa, Lama, and Parwi-Tso (also known as Ronggi-Sharwa). 
+              Each represents a distinct ancestral line with its own history and traditions.</span>
             </p>
           </div>
         </Card>
@@ -169,7 +172,291 @@ export default function ClansPage() {
           </div>
         </Card>
 
-        {/* Section 4: Oral Tradition */}
+        {/* Section 4: The Six Major Clans */}
+        <Card className="shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-amber-300/50 bg-gradient-to-br from-amber-50/50 to-orange-50/30 backdrop-blur-sm">
+          <div className="text-center mb-8">
+            <div className="inline-block">
+              <div className="flex justify-center mb-4">
+                <span className="text-5xl" style={{ fontFamily: 'serif' }}>☸</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-earth-800 mb-2">
+                The Six Major Sherpa Clans
+              </h2>
+              <p className="text-amber-700 font-semibold text-xl" style={{ fontFamily: 'serif' }}>
+                རུ་དྲུག། • Ru Drug (Six Ru)
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            {/* 1. Minyakpa */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-earth-500 to-amber-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">1. Minyakpa</h3>
+                  <p className="text-sm text-sage-600">མི་ཉག་པ། • Widely found in Khumbu and Solu regions</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Shire</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Taktok</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Pinasa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Ngemaray</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Pangkarma</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Sharwa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Dhongpa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Garza</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Nyendawa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Sharitokpa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Gole</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Khapa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-amber-600 mr-2">•</span>
+                    <span>Shaore</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. Thimmi */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-sage-500 to-earth-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">2. Thimmi</h3>
+                  <p className="text-sm text-sage-600">ཐིམ་མི། • Common in upper Solu and Rolwaling regions</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Paldorje</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Salaka</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Khampa-Che</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Gobarma</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Chusharwa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Pya-Phullo</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Murmin</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Nawa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Dhompa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Lhungbuwa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Shire</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-sage-600 mr-2">•</span>
+                    <span>Dotup</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Chawa */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">3. Chyawa</h3>
+                  <p className="text-sm text-sage-600">རྒྱ་བ། • One of the six major clans</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Nawa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>Lhukpa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. Ngompa */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">4. Ngompa</h3>
+                  <p className="text-sm text-sage-600">དངོས་པ། • One of the six major clans</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Chakpa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Tompa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Dhakpo</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Zhuwa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-600 mr-2">•</span>
+                    <span>Dhawa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 5. Lama */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">5. Lama</h3>
+                  <p className="text-sm text-sage-600">བླ་མ། • One of the six major clans</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-purple-600 mr-2">•</span>
+                    <span>Lama Gonpa</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-purple-600 mr-2">•</span>
+                    <span>Lama Sharwa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 6. Parwi-Tso */}
+            <div className="bg-white/80 rounded-2xl p-6 shadow-lg border-2 border-earth-200/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 shadow-md">
+                  <span className="text-2xl">🏔️</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-earth-800">6. Parwi-Tso</h3>
+                  <p className="text-sm text-sage-600">པར་བི་མཚོ། • Also known as Ronggi-Sharwa</p>
+                </div>
+              </div>
+              <div className="pl-16">
+                <p className="text-sm font-semibold text-earth-700 mb-3">Sub-clans (Shingza):</p>
+                <div className="grid md:grid-cols-2 gap-2 text-sage-700">
+                  <div className="flex items-center">
+                    <span className="text-red-600 mr-2">•</span>
+                    <span>Ronggi-Sharwa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Important Note */}
+          <div className="mt-8 p-6 bg-gradient-to-r from-amber-100 to-orange-100 border-l-4 border-amber-600 rounded-r-2xl">
+            <div className="flex items-start space-x-3">
+              <svg className="w-6 h-6 text-amber-700 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p className="font-bold text-amber-900 mb-2">Note on Sub-Clan Names</p>
+                <p className="text-sm text-earth-800 leading-relaxed">
+                  Some sub-clan names may appear in multiple major clans (such as &ldquo;Shire&rdquo; in both Thimmi and Minyakpa, or &ldquo;Nawa&rdquo; in both Thimmi and Chawa). 
+                  However, these are <strong>distinct sub-clans</strong> with different histories. The major clan (Ru) determines the primary lineage. 
+                  Regional variations in spelling and pronunciation may also exist.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        {/* Section 5: Oral Tradition */}
         <Card>
           <h2 className="text-2xl font-semibold text-earth-700 mb-4">
             The Oral Tradition of Clan Knowledge
